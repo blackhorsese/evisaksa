@@ -99,17 +99,12 @@ function Logo({ isScrolled }) {
                   </Link>
                 </li>
                 <NavLinks/>
-                <li>
-                  <Link to="/register" className="tracking-wider hover:bg-[#f1f1f1] px-8 py-3 flex flex-row items-center duration-200 border-b hover:text-[#78006E] text-[#000] border-[#000] border-opacity-10 text-sm font-semibold">
-                    Apply for eVisa
-                  </Link>
-                </li>
                   <p className='text-sm px-8 text-[#000] pt-8'>
-                  Planning a Trip to Saudi Arabia? Discover the Visa Application Process in a Few Simple Steps.
+                    Planning a Trip to Saudi Arabia? Discover the Visa Application Process in a Few Simple Steps.
                   </p>
                 <li>
-                  <Link to="/" className="hover:bg-[#78006E] border border-[#78006E] items-center relative h-10 mt-8 tracking-wider duration-200 mx-10 justify-center flex rounded-sm">
-                    Contact us
+                  <Link to="/register" className="hover:bg-[#78006E] border border-[#78006E] items-center relative h-10 mt-8 tracking-wider duration-200 mx-10 justify-center flex rounded-sm">
+                    Apply for eVisa
                   </Link>
                 </li>
               </ul>
@@ -173,17 +168,13 @@ function Logo({ isScrolled }) {
                   </Link>
                 </li>
                 <Navlinksblack/>
-                <li>
-                  <Link to="/register" className="tracking-wider hover:bg-[#1a1e24] px-8 py-3 flex flex-row items-center duration-200 border-b hover:text-[#78006E] text-[#fff] border-[#ffffff] border-opacity-10 text-sm font-semibold">
-                    Apply for eVisa
-                  </Link>
-                </li>
+
                   <p className='text-sm px-8 text-[#C3CDD3] pt-8'>
                     Planning a Trip to Saudi Arabia? Discover the Visa Application Process in a Few Simple Steps.
                   </p>
                 <li>
-                  <Link to="/" className="hover:bg-[#78006E] text-white border border-[#78006E] items-center relative h-10 mt-8 tracking-wider duration-200 mx-10 justify-center flex rounded-sm">
-                    Contact us
+                  <Link to="/register" className="hover:bg-[#78006E] text-[#C3CDD3] border border-[#78006E] items-center relative h-10 mt-8 tracking-wider duration-200 mx-10 justify-center flex rounded-sm">
+                    Apply for eVisa
                   </Link>
                 </li>
               </ul>
