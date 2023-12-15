@@ -56,7 +56,7 @@ export default function About() {
                             </div>
                         </div>
                     </a>
-                    <a href='./' className='justify-center hover:bg-[#f1f1f1] border-[#78006E] border-opacity-20 border rounded-xl shadow-xl'>
+                    <a href='.//useful-contacts' className='justify-center hover:bg-[#f1f1f1] border-[#78006E] border-opacity-20 border rounded-xl shadow-xl'>
                         <div className='px-3 lg:h-96 h-80 py-4 items-center w-72 lg:w-[22rem]'>
                         <img className='w-96' src='./0025.jpg' alt='images'/>
                         <div className='pt-5 md:text-base text-sm px-5'>
