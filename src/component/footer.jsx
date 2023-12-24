@@ -96,7 +96,7 @@ const Footer = () => {
               <div className='bg-[#78006E] overflow-hidden'>
                 <div className='max-w-screen-xl mx-auto justify-center md:pt-20 md:pb-10 md:px-10 py-10'>
                   <h1 className='text-[#fff] md:text-base text-sm justify-center pb-5 px-5 '>
-                    Website last updated: November 28, 2023
+                    Website last updated: December 24, 2023
                   </h1>
                   <div className='md:grid md:grid-cols-4 md:gap-8 max-w-screen-2xl mx-auto justify-center py-5 text-white px-7'>
                     <div className="py-2 md:px-0 px-2">
