@@ -107,6 +107,11 @@ function Logo({ isScrolled }) {
                     Apply for eVisa
                   </Link>
                 </li>
+                <li> 
+                  <Link to="/contact-us" className="hover:bg-[#78006E] border border-[#78006E] items-center relative h-10 mt-8 tracking-wider duration-200 mx-10 justify-center flex rounded-sm">
+                    Contact Us
+                  </Link>
+                </li>
               </ul>
             </header>
       ) : (
@@ -152,6 +157,7 @@ function Logo({ isScrolled }) {
                   >
                     Apply for eVisa
                   </a>
+                  
                 </div>
               </div>
             </div>
@@ -177,6 +183,9 @@ function Logo({ isScrolled }) {
                     Apply for eVisa
                   </Link>
                 </li>
+                <Link to="/contact-us" className="hover:bg-[#78006E] text-[#C3CDD3] border border-[#78006E] items-center relative h-10 mt-8 tracking-wider duration-200 mx-10 justify-center flex rounded-sm">
+                    Contact Us
+                  </Link>
               </ul>
     </header>
       )}
