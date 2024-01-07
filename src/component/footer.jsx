@@ -186,7 +186,7 @@ const Footer = () => {
                       </h1>
                       <div className="flex flex-row gap-7 pt-5">
                         <a 
-                          target="_black" href="https://twitter.com/BlackStoneSec" 
+                          target="_black" href="https://twitter.com/" 
                           className="text-[#ffffff]
                           items-center text-sm relative h-8 pt-0.5 uppercase duration-200 flex justify-center flex-row hover:text-[#fff] active:text-[#DFC660]"
                           rel="noreferrer">
