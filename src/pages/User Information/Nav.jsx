@@ -1,8 +1,6 @@
-import { Transition } from '@headlessui/react'
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import NavLinks from "../../component/Header/Navlinks";
-import Navlinksblack from "../../component/Header/Navlinksblack";
 
 
 function Navbar() {
@@ -104,10 +102,10 @@ function Logo({ isScrolled }) {
                   </Link>
                 </li>
                   <p className='text-sm px-8 text-[#000] pt-8'>
-                  Planning a Trip to Saudi Arabia? Discover the Visa Application Process in a Few Simple Steps.
+                    Planning a Trip to Saudi Arabia? Discover the Visa Application Process in a Few Simple Steps.
                   </p>
                 <li>
-                  <Link to="/" className="hover:bg-[#78006E] border border-[#78006E] items-center relative h-10 mt-8 tracking-wider duration-200 mx-10 justify-center flex rounded-sm">
+                  <Link to="/contact-us" className="hover:bg-[#78006E] border border-[#78006E] items-center relative h-10 mt-8 tracking-wider duration-200 mx-10 justify-center flex rounded-sm">
                     Contact us
                   </Link>
                 </li>
