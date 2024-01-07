@@ -8,10 +8,9 @@ const Contact = () => {
 
   const [email, setEmail] = useState('');
   const location = useLocation();
-  const [name, setName] = useState('');
-  const [company, setCompany] = useState ('');
+  const [first_name, setFirst_name] = useState('');
+  const [last_name, setLast_name] = useState ('');
   const [number, setNumber] = useState ('');
-  const [subject, setSubject] = useState ('');
   const [message, setMessage] = useState ('');
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -20,18 +19,17 @@ const Contact = () => {
     event.preventDefault();
     setLoading(true);
     const templateParams = {
-        name: name,
-        company: company,
+        first_name: first_name,
+        last_name: last_name,
         email: email,
         number: number,
-        subject: subject,
         message: message,
     };
     emailjs.send(
-      'service_ckzlh2f',
-      'template_uwmp5uo',
+      'service_t0mmzxm',
+      'template_zpyvp5q',
       templateParams,
-      'QQIaVyUi87kjZFhBr'
+      'a5SikSpJjSDiomd52'
     )
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
@@ -44,7 +42,7 @@ const Contact = () => {
       });
     };
 
-  return (
+  return ( 
     <>
     <div className='supportser'>
         <Navbar color={location.pathname} />
@@ -74,12 +72,11 @@ const Contact = () => {
                             </h1>
                             <input
                                 className='bg-[#f0f0f0] border py-2 w-full px-4 mx-auto'
-                                placeholder='Enter First Name'
-                                type="name"
-                                id="name"
-                                value={name}
+                                placeholder='First Name'
+                                type="text"
+                                value={first_name}
                                 required
-                                onChange={(event) => setName(event.target.value)}
+                                onChange={(event) => setFirst_name(event.target.value)}
                             />
                         </div>
                         <div className='py-3'>
@@ -88,12 +85,11 @@ const Contact = () => {
                             </h1>
                             <input
                                 className='bg-[#f0f0f0] border py-2 w-full px-4 mx-auto md:mt-0'
-                                placeholder='Enter Last Name'
-                                type="company"
-                                id="company"
-                                value={company}
+                                placeholder='Last Name'
+                                type="text"
+                                value={last_name}
                                 required
-                                onChange={(event) => setCompany(event.target.value)}
+                                onChange={(event) => setLast_name(event.target.value)}
                             />
                         </div>
                         <div className='py-3'>
@@ -102,9 +98,8 @@ const Contact = () => {
                             </h1>
                             <input
                                 className='bg-[#f0f0f0] border py-2 w-full px-4 mx-auto'
-                                placeholder='Enter Email Address'
+                                placeholder='Email Address'
                                 type="email"
-                                id="email"
                                 value={email}
                                 required
                                 onChange={(event) => setEmail(event.target.value)}
@@ -118,7 +113,6 @@ const Contact = () => {
                                 className='bg-[#f0f0f0] border py-2 w-full px-4 mx-auto'
                                 placeholder='Phone Number'
                                 type="number"
-                                id="number"
                                 value={number}
                                 required
                                 onChange={(event) => setNumber(event.target.value)}
@@ -127,31 +121,8 @@ const Contact = () => {
                     </div>
                     <div className='mt-5'>
                         <h1 className='py-2'>
-                            Message Type
+                            Message
                         </h1>
-                        <select
-                        
-                            className='bg-[#f0f0f0] border w-full md:w-96 px-4 mx-auto py-2'
-                            placeholder='Subject'
-                            type="subject"
-                            id="subject"
-                            value={subject}
-                            required
-                            onChange={(event) => setSubject(event.target.value)}
-                        >
-                            <option>
-                                Complaint
-                            </option>
-                            <option value="Emergency">
-                                Emergency
-                            </option>
-                            <option value="Enquiry">
-                                Enquiry
-                            </option>
-                            <option>
-                                Suggestion
-                            </option>
-                        </select>
                         <textarea
                             className='bg-[#f0f0f0] border pb-52 py-5 w-full px-4 mx-auto mt-8 overflow-y-hidden'
                             placeholder='Message'
@@ -163,12 +134,12 @@ const Contact = () => {
                         />
                     </div>
                     <div className='items-center'>
-                        <button className='bg-secondary px-10 tracking-wider py-2 md:mt-10 mt-5 text-white' type="submit">
+                        <button className='bg-[#78006E] px-10 tracking-wider py-2 md:mt-10 mt-5 text-white' type="submit">
                             {loading ? 'Loading...' : 'Submit'}
                         </button>
                     </div>
                 </div>}
-                {success && <p className='justify-center mx-auto text-center pt-10 font-semibold text-[#CD252B]'>Email sent successfully!</p>}
+                {success && <p className='justify-center mx-auto font-semibold text-secondary pb-40'>Email sent successfully!</p>}
             </form>
         </div>
     </div>
