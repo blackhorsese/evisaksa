@@ -204,7 +204,7 @@ const Footer = () => {
                   <div className='justify-center mx-auto md:text-center px-5'>
                       <div className='border-b border-[#097061] py-3'/>
                       <p className='md:text-sm text-xs text-[#C3CDD3] md:pt-5 pt-5'>
-                        Copyright © 2023 Saudi Tourism Authority. All rights reserved
+                        Copyright © 2024 Saudi Tourism Authority. All rights reserved
                       </p>
                   </div>
                 </div>
