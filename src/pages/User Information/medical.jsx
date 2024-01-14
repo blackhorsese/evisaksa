@@ -143,7 +143,7 @@ function Medical() {
             />
             <p className="ml-2 self-center md:text-lg text-base">
               {" "}
-              By checking this box, I agree to the insurance coverage listed above with a fee of 180.00 SAR.
+              By checking this box, I agree to the insurance coverage listed above with a fee of 187.82 SAR.
             </p>
           </div>
 
