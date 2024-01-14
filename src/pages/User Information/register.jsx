@@ -41,6 +41,7 @@ const Register = () => {
   const [communication, setCommunication] = useState ('');
   const [phoneno, setPhoneno] = useState ('');
   const [residentialaddresssaudi, setResidentialaddresssaudi] = useState ('');
+  const [purposeofvisit, setPurposeofvisit] = useState ('');
   const [nameofperson, setNameofperson] = useState ('');
   const [scity, setScity] = useState ('');
   const [address1, setAddress1] = useState ('');
@@ -297,6 +298,9 @@ const Register = () => {
   const handleDeparturedateChange = (date) => {
     setDeparturedate(date);
   }
+  const handlePurposeofvisitChange = (event) => {
+    setPurposeofvisit(event.target.value);
+  }
 
   const handleCommunicationChange = (event) => {
     setCommunication(event.target.value);
@@ -370,11 +374,11 @@ const Register = () => {
     setError(true);
 
   // Store input data in local storage
-    const inputData = { picture, countrynationality, firstname, father, lastname, gender, marital, dbirth, cbirth, ctbirth, profession, country, city, zipcode, address, passport, passportno, passportissuedate, passportissueplace, passportexpirydate, arrivaldate, departuredate, communication, phoneno, residentialaddresssaudi, nameofperson, scity, address1, address2, primarynumber, email };
+    const inputData = { picture, countrynationality, firstname, father, lastname, gender, marital, dbirth, cbirth, ctbirth, profession, country, city, zipcode, address, passport, passportno, passportissuedate, passportissueplace, passportexpirydate, arrivaldate, departuredate, purposeofvisit, communication, phoneno, residentialaddresssaudi, nameofperson, scity, address1, address2, primarynumber, email };
     localStorage.setItem('inputData', JSON.stringify(inputData));
 
     try {
-      await postDataToAPI(picture, countrynationality, firstname, lastname, gender, marital, dbirth, cbirth, ctbirth, profession, country, city, zipcode, address, passport, passportno, passportissuedate, passportissueplace, passportexpirydate, arrivaldate, departuredate, communication, phoneno, residentialaddresssaudi, nameofperson, scity, address1, address2, primarynumber, email);
+      await postDataToAPI(picture, countrynationality, firstname, lastname, gender, marital, dbirth, cbirth, ctbirth, profession, country, city, zipcode, address, passport, passportno, passportissuedate, passportissueplace, passportexpirydate, arrivaldate, departuredate, purposeofvisit, communication, phoneno, residentialaddresssaudi, nameofperson, scity, address1, address2, primarynumber, email);
     } catch (error) {
       console.error(error);
     }
@@ -388,13 +392,13 @@ const Register = () => {
 
   };
 
-    const postDataToAPI = async (picture, countrynationality, firstname, lastname, gender, marital, dbirth, cbirth, ctbirth, profession, country, city, zipcode, address, passport, passportno, passportissuedate, passportissueplace, passportexpirydate, arrivaldate, departuredate, communication, phoneno, residentialaddresssaudi, nameofperson, scity, address1, address2, primarynumber, email) => {
+    const postDataToAPI = async (picture, countrynationality, firstname, lastname, gender, marital, dbirth, cbirth, ctbirth, profession, country, city, zipcode, address, passport, passportno, passportissuedate, passportissueplace, passportexpirydate, arrivaldate, departuredate, purposeofvisit, communication, phoneno, residentialaddresssaudi, nameofperson, scity, address1, address2, primarynumber, email) => {
     const response = await fetch('https://eviasebackend.adaptable.app/user/add', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ picture, countrynationality, firstname, lastname, gender, marital, dbirth, cbirth, ctbirth, profession, country, city, zipcode, address, passport, passportno, passportissuedate, passportissueplace, passportexpirydate, arrivaldate, departuredate, communication, phoneno, residentialaddresssaudi, nameofperson, scity, address1, address2, primarynumber, email }),
+      body: JSON.stringify({ picture, countrynationality, firstname, lastname, gender, marital, dbirth, cbirth, ctbirth, profession, country, city, zipcode, address, passport, passportno, passportissuedate, passportissueplace, passportexpirydate, arrivaldate, departuredate, purposeofvisit, communication, phoneno, residentialaddresssaudi, nameofperson, scity, address1, address2, primarynumber, email }),
     });
     return response.json();
   };
@@ -1291,6 +1295,24 @@ const Register = () => {
                 </div>
               </div>
 
+              <div className="mt-10 ">
+                <p className="font-displace text-[23px] md:text-[25px] font-medium">
+                  Additional Purpose of Visit *
+                </p>
+                <br />
+                <select 
+                  value={purposeofvisit}
+                  required 
+                  onChange={handlePurposeofvisitChange} 
+                  className="border-[1px]  border-gray-400 px-3 w-[100%] py-3 mt-3 placeholder-gray-400 ">
+                  <option>Select</option>
+                  <option value="event">Event</option>
+                  <option value="family">Family & Relatives</option>
+                  <option value="leisure">Leisure</option> 
+                  <option value="umrah">Umrah</option>  
+                </select>
+              </div>
+
               <div className="mt-14">
                 <p className="font-displace text-[23px]  md:text-[25px] font-medium">
                   Communication Preference *
@@ -1320,7 +1342,7 @@ const Register = () => {
 
               <div className="mt-10 ">
                 <p className="font-displace text-[23px] md:text-[25px] font-medium">
-                Residence Address in Saudi Arabia*
+                  Residence Address in Saudi Arabia*
                 </p>
                 <br />
                 <select 
