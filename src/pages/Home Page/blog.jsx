@@ -185,7 +185,7 @@ function blog() {
             </a>
           </div>
           <div>
-            <img className='lg:h-72' src='./0029.jpg' alt='images'/>
+            <img className='lg:h-72' src='./home/Apply-For-Your-eVisa-Today.png' alt='images'/>
           </div>
         </div>
       </div>
