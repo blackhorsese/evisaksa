@@ -10,7 +10,7 @@ function Info() {
       <Navbar color={location.pathname} />
       <div className="bg-[#E0E0E0] min-h-screen">
         <div className="lg:pt-44 md:pt-32 pt-24 lg:pb-20 md:pb-16 pb-10 max-w-screen-md mx-auto justify-center">
-          <div className="bg-white lg:px-10 md:px-8 px-5 lg:py-10 py-5 lg:mx-0 md:mx-0 mx-">
+          <div className="bg-white lg:px-10 md:px-8 px-5 lg:py-10 py-5 lg:mx-0 md:mx-0 mx-5">
             <p className="lg:text-3xl md:text-3xl text-2xl lg:mt-5 md:mt-5 mt-2 font-medium font-displace text-black leading-[1]">
               COOKIES AND RELATED TRACKING TECHNOLOGIES
             </p>
