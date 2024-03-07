@@ -44,9 +44,9 @@ const Contact = () => {
   return ( 
     <>
     <Navbar color={location.pathname} />
-    <div className="bg-[#E0E0E0] min-h-screen">
+    <div className="min-h-screen">
         <div className="lg:pt-40 md:pt-40 pt-20 lg:pb-20 md:pb-16 pb-10 max-w-screen-lg mx-auto justify-center">
-            <div className='bg-white lg:px-10 md:px-8 px-5 lg:py-10 py-5 lg:mx-0 md:mx-10 mx-4 border-[#403F68] border shadow-lg'>
+            <div className='bg-white lg:px-10 md:px-8 px-5 lg:py-10 py-5'>
                 <div className='max-w-screen-2xl mx-auto align-middle pt-5'>
                     <div className='mx-auto'>
                         <h1 className='md:text-4xl text-2xl font-semibold'>
