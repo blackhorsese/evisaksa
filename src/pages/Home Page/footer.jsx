@@ -213,7 +213,7 @@ const Footer = () => {
                                 </svg>
                             </a>
                             <a 
-                                target="_black" href="" 
+                                target="_black" href="https://www.google.com/maps/search/Kemp+House,+152+-+160+City+Rd,+London+EC1V+2NX,+United+Kingdom/@51.5270677,-0.0907314,17z/data=!3m1!4b1?entry=ttu" 
                                 className="items-center text-sm relative h-8 pt-0.5 uppercase duration-200 flex justify-center flex-row hover:text-[#fff]"
                                 rel="noreferrer">
                                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
